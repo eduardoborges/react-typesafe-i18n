@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-restricted-exports": 0,
+    "import/prefer-default-export": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.config.*"],
+      "rules": {
+        "eslint-disable @typescript-eslint/semi": 0,
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ]
+}

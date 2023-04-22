@@ -1,0 +1,11 @@
+{
+  "hello": "Hi {user}",
+  "greetings": {
+    "morning": "Good morning {user}",
+    "evening": "Good evening {user}",
+    "casual": {
+      "morning": "Yo, happy morning",
+      "afternoon": "Yolo"
+    }
+  }
+}

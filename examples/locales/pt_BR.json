@@ -1,0 +1,11 @@
+{
+  "hello": "Olá {user}",
+  "greetings": {
+    "morning": "Bom dia {user}",
+    "evening": "Boa tarde {user}",
+    "casual": {
+      "morning": "Ei, bom dia!",
+      "afternoon": "Ei!"
+    }
+  }
+}

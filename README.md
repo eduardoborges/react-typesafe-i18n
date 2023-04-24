@@ -1,44 +1,35 @@
 # react-stupid-i18n
 
-[![NPM](https://img.shields.io/npm/v/use-mask-input.svg)](https://www.npmjs.com/package/use-mask-input) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Bundle Size](https://badgen.net/bundlephobia/minzip/use-mask-input)](https://bundlephobia.com/result?p=use-mask-input)
-
-TODO: Add description
+[![NPM](https://img.shields.io/npm/v/react-stupid-i18n.svg)](https://www.npmjs.com/package/react-stupid-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) [![Bundle Size](https://badgen.net/bundlephobia/minzip/react-stupid-i18n)](https://bundlephobia.com/result?p=react-stupid-i18n)
 
 
-## Features
 
-TODO
+- 🤘 100% type-safe, infering all locales keys.
+- 🏆 Better Developer Experience (DX);
+- 🤩 Powered by Preact Signals;
+- 🗜 Small bundle;
 
-## Using
+---
 
-### 1. Enable `resolveJsonModule` in your tsconfig.json
+- [react-stupid-i18n](#react-stupid-i18n)
+  - [Install](#install)
+  - [Setup](#setup)
+  - [Using JSON locale files](#using-json-locale-files)
 
-```json
-{
-  "compilerOptions": {
-    ...
-    "resolveJsonModule": true,
-    ...
-  },
-}
+## Install
 
-Is necessary to magic happens;
-
-```
-### 2. Install
-
-```sh
+```bash
 npm i react-stupid-i18n
 ```
 
-Create an `i18n.ts` file:
+## Setup
 
 ```typescript
 import { createInstance } from 'react-stupid-i18n';
 
-// import your files
-import en_US from './locales/en_US.json';
-import pt_BR from './locales/pt_BR.json';
+// must have same structure
+import en_US from './locales/en_US';
+import pt_BR from './locales/pt_BR';
 
 export const {
   t, setLanguage, language, avaliableLanguages,
@@ -48,7 +39,8 @@ export const {
 }, 'en_US');
 ```
 
-Aaaand in your app:
+In your app:
+
 ```typescript
 import React from 'react';
 import { t } from './i18n';
@@ -59,5 +51,28 @@ function App() {
       {t('greetings.evening', { user: 'Eduardo' })}
     </div>
   );
+}
+```
+
+## Using JSON locale files
+
+You can use JSON files and be 100% type-safe;
+
+```typescript
+// must have same structure
+import en_US from './locales/en_US.json';
+import pt_BR from './locales/pt_BR.json';
+```
+
+You just need to enable `resolveJsonModule` in your tsconfig.json file:
+
+
+```json
+{
+  ...
+  "compilerOptions": {
+    "resolveJsonModule": true,
+  },
+  ...
 }
 ```

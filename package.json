@@ -2,7 +2,7 @@
   "name": "react-stupid-i18n",
   "version": "0.0.1",
   "description": "TODO: description",
-  "author": "eduardoborges",
+  "author": "Eduardo Borges<euduardoborges@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/eduardoborges/react-stupid-i18n.git",
   "source": "src/index.tsx",

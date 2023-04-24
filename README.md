@@ -8,6 +8,56 @@ TODO: Add description
 ## Features
 
 TODO
-## Install
 
-TODO
+## Using
+
+### 1. Enable `resolveJsonModule` in your tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "resolveJsonModule": true,
+    ...
+  },
+}
+
+Is necessary to magic happens;
+
+```
+### 2. Install
+
+```sh
+npm i react-stupid-i18n
+```
+
+Create an `i18n.ts` file:
+
+```typescript
+import { createInstance } from 'react-stupid-i18n';
+
+// import your files
+import en_US from './locales/en_US.json';
+import pt_BR from './locales/pt_BR.json';
+
+export const {
+  t, setLanguage, language, avaliableLanguages,
+} = createInstance({
+  en_US,
+  pt_BR,
+}, 'en_US');
+```
+
+Aaaand in your app:
+```typescript
+import React from 'react';
+import { t } from './i18n';
+
+function App() {
+  return (
+    <div className="App">
+      {t('greetings.evening', { user: 'Eduardo' })}
+    </div>
+  );
+}
+```

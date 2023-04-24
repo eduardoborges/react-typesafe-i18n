@@ -1,35 +1,24 @@
-name: CD
+name: cd
 
 on:
-  workflow_dispatch:
-  release:
-    types:
-      - "published"
+  push:
+    branches:
+      - "main"
 
 jobs:
-  test:
-    name: Publish to NPM
-    runs-on: ubuntu-latest
+  release:
+    runs-on: "ubuntu-latest"
     env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           persist-credentials: false
-
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build
-        run: pnpm run build
-
-      - name: Publish to NPM
-        run: npm publish
-
+      - run: npm ci
+      - run: npx semantic-release --dry-run

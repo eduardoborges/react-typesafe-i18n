@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   pull_request:
@@ -9,16 +9,14 @@ on:
       - edited
 
 jobs:
-  check_sv:
-    name: Check Semantic Version PR
+  semantic_pull_request:
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v3
       - uses: amannn/action-semantic-pull-request@v4
 
   tests:
-    name: Run Unit Tests
-    needs: check_sv
+    needs: semantic_pull_request
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v3
@@ -26,9 +24,5 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run tests
-        run: npm test
+      - run: npm ci
+      - run: npm test

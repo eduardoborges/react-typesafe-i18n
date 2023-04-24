@@ -1,6 +1,9 @@
+import { readPackageSync } from 'read-pkg';
+
 import esbuild from 'rollup-plugin-esbuild';
 import dts from 'rollup-plugin-dts';
-import pkg from './package.json' assert { type: 'json' };
+
+const pkg = readPackageSync();
 
 const input = 'src/index.ts';
 const external = Object.keys(pkg.peerDependencies);

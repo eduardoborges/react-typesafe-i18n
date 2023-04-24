@@ -1,11 +1,15 @@
 import esbuild from 'rollup-plugin-esbuild';
 import dts from 'rollup-plugin-dts';
+import pkg from './package.json' assert { type: 'json' };
+
+const input = 'src/index.ts';
+const external = Object.keys(pkg.peerDependencies);
 
 /** @type import('rollup').RollupOptions[] */
 export default [
   {
-    input: 'src/index.ts',
-    external: ['react', 'react-dom', 'react/jsx-runtime'],
+    input,
+    external,
     plugins: [
       esbuild({ minify: false }),
     ],
@@ -15,7 +19,7 @@ export default [
     ],
   },
   {
-    input: 'src/index.ts',
+    input,
     output: [{ file: 'dist/index.d.ts', format: 'es' }],
     plugins: [dts()],
   },

@@ -1,21 +1,31 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
-import int from './core';
+import { computed, signal } from '@preact/signals-react';
+import { get, PathInto } from './utils';
 
-export const context: React.Context<T> = React.createContext({});
+export function createInstance<T>(locales: T, initialLanguage: keyof T) {
+  type LocaleName = keyof T;
+  type Locale = T[LocaleName];
 
-export const { Provider: ContextProvider } = context;
+  const language = signal(initialLanguage);
+  const dictionary = computed(() => locales[language.value]);
+  const avaliableLanguages = computed(() => Object.keys(locales!) as LocaleName[]);
 
-export const Provider: React.FC<any> = ({ children }) => {
-  const [language, setLanguage] = React.useState('en');
-  const i18n = int(language);
+  const setLanguage = (_language: LocaleName) => {
+    language.value = _language;
+  };
 
-  const t = (key: string) => i18n.t(key, '');
+  function t(key: PathInto<Locale>): string {
+    if (!dictionary) return '';
 
-  return (
-    <ContextProvider value={{ t, setLanguage }}>
-      {children}
-    </ContextProvider>
-  );
-};
+    return get(
+      dictionary.value as Record<string, string>,
+      (key as string).split('.'),
+    );
+  }
+
+  return {
+    t,
+    language: language.value,
+    avaliableLanguages: avaliableLanguages.value,
+    setLanguage,
+  };
+}

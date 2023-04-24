@@ -1,7 +1,7 @@
 import ptBR from './locales/pt_BR.json';
 import enUS from './locales/en_US.json';
 
-import core from '../src/core';
+import core from '../src/utils';
 
 const locales = {
   pt_BR: ptBR,

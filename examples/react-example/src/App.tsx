@@ -1,41 +1,30 @@
-import React, { useState } from 'react';
-import { context, Provider } from 'react-stupid-i18n';
-import int from 'react-stupid-i18n/core';
-import reactLogo from './assets/react.svg';
-import viteLogo from '../vite.svg';
+import React from 'react';
 import './App.css';
+import {
+  t, setLanguage, language, avaliableLanguages,
+} from './i18n';
+
+type AvaliableLanguages = typeof avaliableLanguages[number];
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  console.log('render');
+  const changeLanguage = (lang: AvaliableLanguages) => {
+    setLanguage(lang);
+  };
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((c) => c + 1)}>
-          count is
-          {' '}
-          {count}
-        </button>
-        <p>
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {t('hello')}
+      <br />
+      Current:
+      {language}
+      <br />
+      <select onChange={(e) => changeLanguage(e.target.value as AvaliableLanguages)}>
+        {avaliableLanguages.map((lang) => (
+          <option key={lang} value={lang}>
+            {lang}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

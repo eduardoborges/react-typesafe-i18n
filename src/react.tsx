@@ -1,5 +1,7 @@
 import { computed, signal } from '@preact/signals-react';
-import { get, PathInto } from './utils';
+import {
+  get, replace, PathInto,
+} from './utils';
 
 export function createInstance<T>(locales: T, initialLanguage: keyof T) {
   type LocaleName = keyof T;
@@ -13,13 +15,16 @@ export function createInstance<T>(locales: T, initialLanguage: keyof T) {
     language.value = _language;
   };
 
-  function t(key: PathInto<Locale>): string {
+  function t(key: PathInto<Locale>, replaceStrings?: Record<string, string | number>): string {
     if (!dictionary) return '';
-
-    return get(
+    const value = get(
       dictionary.value as Record<string, string>,
       (key as string).split('.'),
     );
+
+    if (replaceStrings) return replace(value, replaceStrings);
+
+    return value;
   }
 
   return {

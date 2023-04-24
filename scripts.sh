@@ -9,23 +9,23 @@ args=${@:2}
 
 function dev() {
   echo "🚀 Starting dev server...";
-  pnpx rollup -c --watch;
+  npx rollup -c --watch;
 };
 
 function build() {
   echo "📦 Building package...";
   rm -rf dist;
-  pnpx rollup -c;
+  npx rollup -c;
 };
 
 function prepare() {
   echo "📦 Preparing package...";
-  pnpx rollup build
+  npx rollup build
 };
 
 function test() {
   echo "🧪 Running tests...";
-  pnpx vitest;
+  npx vitest;
 };
 
 eval $cmd $args

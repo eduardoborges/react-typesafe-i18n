@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# all package scripts
-# to not polute package.json file
-# with long scripts
+# All package scripts to not polute
+# package.json file with long scripts
 
 cmd=$1
 args=${@:2}
@@ -26,6 +25,10 @@ function prepare() {
 function test() {
   echo "🧪 Running tests...";
   npx vitest;
+};
+
+function hello() {
+  echo "👋 Hello!" $args;
 };
 
 eval $cmd $args

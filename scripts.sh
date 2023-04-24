@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # all package scripts
 # to not polute package.json file

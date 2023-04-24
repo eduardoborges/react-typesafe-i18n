@@ -20,7 +20,7 @@ function build() {
 
 function prepare() {
   echo "📦 Preparing package...";
-  npx rollup build
+  npx rollup -c
 };
 
 function test() {

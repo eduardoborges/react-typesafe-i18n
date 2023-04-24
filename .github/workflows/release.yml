@@ -17,17 +17,17 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "pnpm"
 
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: Install Deps
         run: pnpm install
 
-      - name: Semantic Release
-        run: npx semantic-release --ci
+      # - name: Semantic Release
+      #   run: npx semantic-release --ci

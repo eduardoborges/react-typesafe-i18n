@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/eduardoborges/react-stupid-i18n/compare/1.0.1...1.0.2) (2023-04-28)
+
+
+### Bug Fixes
+
+* change deps aproach ([5da541d](https://github.com/eduardoborges/react-stupid-i18n/commit/5da541daebf37145ea1795ae6d48ab8f6108984e))
+
 ## [1.0.1](https://github.com/eduardoborges/react-stupid-i18n/compare/1.0.0...1.0.1) (2023-04-28)
 
 

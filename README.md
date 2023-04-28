@@ -5,8 +5,8 @@
 
 
 - 🤘 100% type-safe, infering all locales keys.
+- 🤩 No Provider wrapper needed, powered by [preact signals](https://github.com/preactjs/signals);
 - 🏆 Better Developer Experience (DX);
-- 🤩 Powered by Preact Signals;
 - 🗜 Small bundle;
 
 ---
@@ -37,6 +37,22 @@ export const {
   en_US,
   pt_BR,
 }, 'en_US');
+```
+Your locale files:
+
+`./locales/en_US.ts`:
+```json
+{
+  "hello": "Hi {user}",
+  "greetings": {
+    "morning": "Good morning {user}",
+    "evening": "Good evening {user}",
+    "casual": {
+      "morning": "Yo, happy morning",
+      "afternoon": "Yolo"
+    }
+  }
+}
 ```
 
 In your app:

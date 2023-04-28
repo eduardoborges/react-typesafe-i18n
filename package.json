@@ -1,6 +1,6 @@
 {
   "name": "react-stupid-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fully type-safe and lightweight React internationalization library for all your TS and JS projects.",
   "author": "Eduardo Borges<euduardoborges@gmail.com>",
   "repository": "https://github.com/eduardoborges/react-stupid-i18n.git",

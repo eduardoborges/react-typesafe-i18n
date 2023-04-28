@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/eduardoborges/react-stupid-i18n/compare/1.0.0...1.0.1) (2023-04-28)
+
+
+### Bug Fixes
+
+* fix entry point ([c2acc24](https://github.com/eduardoborges/react-stupid-i18n/commit/c2acc2403f94e73f3bd2bf9104a28b7e96236ffe))
+
 # 1.0.0 (2023-04-24)
 
 

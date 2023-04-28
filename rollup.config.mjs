@@ -6,7 +6,7 @@ import dts from 'rollup-plugin-dts';
 const pkg = readPackageSync();
 
 const input = 'src/index.ts';
-const external = Object.keys(pkg.peerDependencies);
+const external = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies });
 
 /** @type import('rollup').RollupOptions[] */
 export default [

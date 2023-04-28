@@ -1,10 +1,10 @@
-# 🌏 react-stupid-i18n <!-- omit in toc -->
+<center>
+  <h1>🌏 react-stupid-i18n</h1>
 
-[![NPM](https://img.shields.io/npm/v/react-stupid-i18n.svg)](https://www.npmjs.com/package/react-stupid-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) [![Bundle Size](https://badgen.net/bundlephobia/minzip/react-stupid-i18n)](https://bundlephobia.com/result?p=react-stupid-i18n)
+  [![NPM](https://img.shields.io/npm/v/react-stupid-i18n.svg)](https://www.npmjs.com/package/react-stupid-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) ![BundleSize](https://badgen.net/bundlephobia/min/react-stupid-i18n) ![Types](https://badgen.net/npm/types/react-stupid-i18n) ![Install Size](https://badgen.net/packagephobia/install/react-stupid-i18n)
+</center>
 
-
-
-- 🤘 100% type-safe, infering all locales keys.
+- 🤘 100% type-safe, infering all locales keys. [name]
 - 🤩 No Provider wrapper needed, powered by [preact signals](https://github.com/preactjs/signals);
 - 🏆 Better Developer Experience (DX);
 - 🗜 Small bundle;

@@ -1,4 +1,4 @@
-# react-stupid-i18n
+# 🌏 react-stupid-i18n <!-- omit in toc -->
 
 [![NPM](https://img.shields.io/npm/v/react-stupid-i18n.svg)](https://www.npmjs.com/package/react-stupid-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) [![Bundle Size](https://badgen.net/bundlephobia/minzip/react-stupid-i18n)](https://bundlephobia.com/result?p=react-stupid-i18n)
 
@@ -11,10 +11,9 @@
 
 ---
 
-- [react-stupid-i18n](#react-stupid-i18n)
-  - [Install](#install)
-  - [Setup](#setup)
-  - [Using JSON locale files](#using-json-locale-files)
+- [Install](#install)
+- [Setup](#setup)
+- [Using JSON locale files](#using-json-locale-files)
 
 ## Install
 

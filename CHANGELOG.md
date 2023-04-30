@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/eduardoborges/react-typesafe-i18n/compare/1.0.2...1.0.3) (2023-04-30)
+
+
+### Bug Fixes
+
+* change package to an friendly name <3 ([c9cb879](https://github.com/eduardoborges/react-typesafe-i18n/commit/c9cb879007d486a6f9fa24b31346aac2a99770e5))
+
 ## [1.0.2](https://github.com/eduardoborges/react-typesafe-i18n/compare/1.0.1...1.0.2) (2023-04-28)
 
 

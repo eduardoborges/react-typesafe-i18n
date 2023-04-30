@@ -1,7 +1,7 @@
 <center>
-  <h1>🌏 react-stupid-i18n</h1>
+  <h1>🌏 react-typesafe-i18n</h1>
 
-  [![NPM](https://img.shields.io/npm/v/react-stupid-i18n.svg)](https://www.npmjs.com/package/react-stupid-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) ![BundleSize](https://badgen.net/bundlephobia/min/react-stupid-i18n) ![Types](https://badgen.net/npm/types/react-stupid-i18n) ![Install Size](https://badgen.net/packagephobia/install/react-stupid-i18n)
+  [![NPM](https://img.shields.io/npm/v/react-typesafe-i18n.svg)](https://www.npmjs.com/package/react-typesafe-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) ![BundleSize](https://badgen.net/bundlephobia/min/react-typesafe-i18n) ![Types](https://badgen.net/npm/types/react-typesafe-i18n) ![Install Size](https://badgen.net/packagephobia/install/react-typesafe-i18n)
 </center>
 
 - 🤘 100% type-safe, infering all locales keys. [name]
@@ -18,13 +18,13 @@
 ## Install
 
 ```bash
-npm i react-stupid-i18n
+npm i react-typesafe-i18n
 ```
 
 ## Setup
 
 ```typescript
-import { createInstance } from 'react-stupid-i18n';
+import { createInstance } from 'react-typesafe-i18n';
 
 // must have same structure
 import en_US from './locales/en_US';

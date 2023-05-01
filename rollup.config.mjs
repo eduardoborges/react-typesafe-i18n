@@ -1,6 +1,6 @@
 import { readPackageSync } from 'read-pkg';
 
-import esbuild from 'rollup-plugin-esbuild';
+import { swc } from 'rollup-plugin-swc3';
 import dts from 'rollup-plugin-dts';
 
 const pkg = readPackageSync();
@@ -14,7 +14,7 @@ export default [
     input,
     external,
     plugins: [
-      esbuild({ minify: false }),
+      swc({ sourceMaps: true }),
     ],
     output: [
       { file: 'dist/index.js', format: 'esm', sourcemap: true },

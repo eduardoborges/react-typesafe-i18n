@@ -1,8 +1,7 @@
-<center>
-  <h1>🌏 react-typesafe-i18n</h1>
+
+  # 🌏 react-typesafe-i18n
 
   [![NPM](https://img.shields.io/npm/v/react-typesafe-i18n.svg)](https://www.npmjs.com/package/react-typesafe-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) ![BundleSize](https://badgen.net/bundlephobia/min/react-typesafe-i18n) ![Types](https://badgen.net/npm/types/react-typesafe-i18n) ![Install Size](https://badgen.net/packagephobia/install/react-typesafe-i18n)
-</center>
 
 - 🤘 100% type-safe, infering all locales keys. [name]
 - 🤩 No Provider wrapper needed, powered by [preact signals](https://github.com/preactjs/signals);
@@ -11,9 +10,10 @@
 
 ---
 
-- [Install](#install)
-- [Setup](#setup)
-- [Using JSON locale files](#using-json-locale-files)
+- [🌏 react-typesafe-i18n](#-react-typesafe-i18n)
+  - [Install](#install)
+  - [Setup](#setup)
+  - [Using JSON locale files](#using-json-locale-files)
 
 ## Install
 

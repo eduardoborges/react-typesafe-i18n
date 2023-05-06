@@ -5,7 +5,7 @@ import { t } from './i18n';
 function App() {
   return (
     <div className="App">
-      {t('greetings.evening', { user: 'Eduardo' })}
+      {t('hello', { user: 'Eduardo' })}
     </div>
   );
 }

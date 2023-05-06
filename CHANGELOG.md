@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/eduardoborges/react-typesafe-i18n/compare/1.0.3...1.0.4) (2023-05-06)
+
+
+### Bug Fixes
+
+* small refactors and enhancements ([9db9f16](https://github.com/eduardoborges/react-typesafe-i18n/commit/9db9f16ee5a153cdc1971296b04a3494579361fe))
+
 ## [1.0.3](https://github.com/eduardoborges/react-typesafe-i18n/compare/1.0.2...1.0.3) (2023-04-30)
 
 

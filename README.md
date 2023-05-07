@@ -1,9 +1,16 @@
 
   # 🌏 react-typesafe-i18n
 
-  [![NPM](https://img.shields.io/npm/v/react-typesafe-i18n.svg)](https://www.npmjs.com/package/react-typesafe-i18n) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com) ![BundleSize](https://badgen.net/bundlephobia/min/react-typesafe-i18n) ![Types](https://badgen.net/npm/types/react-typesafe-i18n) ![Install Size](https://badgen.net/packagephobia/install/react-typesafe-i18n)
+  [![NPM](https://img.shields.io/npm/v/react-typesafe-i18n.svg)](https://www.npmjs.com/package/react-typesafe-i18n)
+  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://standardjs.com)
+  [![BundleSize](https://badgen.net/bundlephobia/min/react-typesafe-i18n)](https://bundlephobia.com/package/react-typesafe-i18n)
+  ![Types](https://badgen.net/npm/types/react-typesafe-i18n)
+  ![Install Size](https://badgen.net/packagephobia/install/react-typesafe-i18n)
+  
+  ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/2353216/236653728-92870077-d461-442f-bc9a-ffd56a880f14.gif)
 
-- 🤘 100% type-safe, infering all locales keys. [name]
+
+- 🤘 100% type-safe, infering all locales keys.
 - 🤩 No Provider wrapper needed, powered by [preact signals](https://github.com/preactjs/signals);
 - 🏆 Better Developer Experience (DX);
 - 🗜 Small bundle;
